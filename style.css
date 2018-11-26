@@ -1,0 +1,29 @@
+label {
+    display: block;
+    width: 300px;
+    position: relative;
+    line-height: 2em;
+}
+label input,
+label select,
+label textarea{
+    position: absolute;
+    left: 150px;
+    top: 5px;
+}
+
+label.checkbox {
+    padding-left: 145px;
+}
+
+label.checkbox input {
+    position: static;
+}
+label.textarea {
+    height: 4em;
+}
+label.textarea textarea{
+    width: 400px;
+    height: 3em;
+    resize: none;
+}
