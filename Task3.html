@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>На checkbox и radio</title>
+    <link rel="stylesheet" type="text/css" href="4Task3.css" />
+
+</head>
+<body>
+<form action="" method="get">
+
+    <input type="checkbox" id="padding" name="notification">
+    <label class="checkbox" for="padding">  Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</label><br><br>
+    <input type="checkbox" id="padding2" name="notification" checked>
+    <label class="checkbox" for="padding2">  Я отмечен по умолчанию!</label><br><br>
+    <input type="checkbox" id="padding3" name="notification" checked disabled>
+    <label class="checkbox" for="padding3">  Я disabled!</label><br><br>
+    <fieldset>
+        <p>Это группа радиокнопок - только одна из них может быть отмечена!</p>
+    <input type="radio" id="padding4" name="bla1" value="1">
+    <label class="checkbox" for="padding4">   Это метка для радио</label><br><br>
+    <input type="radio" id="padding5" name="bla2" value="2">
+    <label class="checkbox" for="padding5">  Это метка для радио</label>
+    </fieldset>
+    <br>
+    <button type="Submit">Отправить на сервер</button>
+</form>
+</body>
+</html>
