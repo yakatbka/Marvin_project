@@ -10,7 +10,7 @@ class User
      * @var \DateTime
      */
     private $birthDate;
-    public function __construct(string $name = 'Никто', \DateTime $birthDate = null)
+    public function __construct(string $name = "Никто", \DateTime $birthDate = null)
     {
         $this->name = $name;
         if ($birthDate === null){
