@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 use App\Service\Mailer;
 use App\Service\Saver;
 use App\Storage\Database;
