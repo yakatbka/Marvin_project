@@ -29,7 +29,7 @@ class Kernel
         if ($_COOKIE ['visits'] == 2 || $_COOKIE ['visits'] == 3 || $_COOKIE ['visits'] == 4) {
             echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раза';
         } else {
-            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раз';
+            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раз ';
         }
 
     }
