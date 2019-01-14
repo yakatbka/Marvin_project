@@ -11,16 +11,26 @@ class Kernel
 {
     public function run ()
     {
-       // $mailer = new Mailer();
-       // $mailer ->send('test@test.com');
+       header ('Content-Type: text/plain');
 
-        $database = new Database();
-        $files = new File();
+       if (empty($_COOKIE ['visits'])) {
+           $_COOKIE ['visits'] = 0;
+       }
 
-        $databaseSaver = new Saver($database);
-        $fileSaver = new Saver($files);
+       $_COOKIE ['visits']++;
 
-        $databaseSaver -> doIt ();
-        $fileSaver -> doIt ();
+       //setcookie('test', 'test value', strtotime('+1 month'));
+       //setcookie('test', ' ', time ()); - удалить куки временем сейчас
+       //echo 'cookie test: ' . $_COOKIE ['test'];
+
+        setcookie('visits', $_COOKIE ['visits'], strtotime('+1 month'));
+        //setcookie('visits', '', time());
+
+        if ($_COOKIE ['visits'] == 2 || $_COOKIE ['visits'] == 3 || $_COOKIE ['visits'] == 4) {
+            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раза';
+        } else {
+            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раз';
+        }
+
     }
 }
