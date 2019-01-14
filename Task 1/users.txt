@@ -1,6 +1,0 @@
-Ekaterina Berdo	yakatbka@gmail.com	123456	1
-user1	wf@GG.GHGH	13653584	0
-user2	kufvvk@jj.hjj	as;rdihgeao;rg4	1
-user3	dfgtdhgg@jj.hjj	trhrthg	1
-user4	user4@jj.hjj	user4123	0
-user5	user5@jj.hjj	user51234	1
