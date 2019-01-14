@@ -11,26 +11,23 @@ class Kernel
 {
     public function run ()
     {
-       header ('Content-Type: text/plain');
 
-       if (empty($_COOKIE ['visits'])) {
-           $_COOKIE ['visits'] = 0;
-       }
+      session_start();
 
-       $_COOKIE ['visits']++;
 
-       //setcookie('test', 'test value', strtotime('+1 month'));
-       //setcookie('test', ' ', time ()); - удалить куки временем сейчас
-       //echo 'cookie test: ' . $_COOKIE ['test'];
+      if (empty ($_SESSION ['Refresh'])) {
+          $_SESSION ['Refresh'] = 0;
+          echo 'Вы еще не обновляли страницу.';
 
-        setcookie('visits', $_COOKIE ['visits'], strtotime('+1 month'));
-        //setcookie('visits', '', time());
+      } elseif
+          ($_SESSION ['Refresh'] >= 2 && $_SESSION ['Refresh'] <= 4) {
+          echo 'Вы  обновили страницу: ' . $_SESSION ['Refresh'] . ' раза';
 
-        if ($_COOKIE ['visits'] == 2 || $_COOKIE ['visits'] == 3 || $_COOKIE ['visits'] == 4) {
-            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раза';
-        } else {
-            echo 'Вы открыли страницу: ' . $_COOKIE ['visits'] . ' раз ';
-        }
+      } else {
+          echo 'Вы обновили страницу: ' . $_SESSION ['Refresh'] . ' раз ';
+      }
+
+      $_SESSION['Refresh']++;
 
     }
 }
