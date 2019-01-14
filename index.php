@@ -1,6 +1,9 @@
 <?php
 
-$a=' ';
-$A='слово';
+ini_set ('display_errors', true);
+error_reporting(E_ALL);
 
-echo $A;
+require  __DIR__ . '/vendor/autoload.php';
+
+$kernel = new \App\Kernel ();
+$kernel ->run();
